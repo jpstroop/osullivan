@@ -25,11 +25,20 @@
   "description": "A longer description of this example book. It should give some real information.",
   "license": "http://www.example.org/license.html",
   "attribution": "Provided by Example Organization",
-  "service": {
-    "@context": "http://example.org/ns/jsonld/context.json",
-    "@id": "http://example.org/service/example",
-    "profile": "http://example.org/docs/example-service.html"
-  },
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b11847736-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b11847736",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b11847736, Digicode: digicon, Collection code: n/a"
+    }
+  ],
   "seeAlso": {
     "@id": "http://www.example.org/library/catalog/book1.marc",
     "format": "application/marc"

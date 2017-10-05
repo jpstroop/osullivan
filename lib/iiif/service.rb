@@ -206,7 +206,7 @@ module IIIF
 
       hsh.keys.each do |key|
         new_key = key.underscore == key ? key : key.underscore
-        if new_key == 'service'
+        if new_key == 'service' && !hsh[key].kind_of?(Array) 
           new_object[new_key] = IIIF::Service.from_ordered_hash(hsh[key], IIIF::Service)
         elsif new_key == 'resource'
           new_object[new_key] = IIIF::Service.from_ordered_hash(hsh[key], IIIF::Presentation::Resource)
